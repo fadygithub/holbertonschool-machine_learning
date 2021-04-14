@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Function for matrix_shape"""
 
+
 def matrix_shape(matrix):
     """Checking the shape of the given matrix"""
     dimension = [len(matrix)]
