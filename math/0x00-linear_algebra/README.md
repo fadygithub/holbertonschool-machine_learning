@@ -1,2 +1,2 @@
-# holbertonschool-machine_learning
-holbertonschool-machine_learning
+# Linear Algebra
+Linear Algebra
