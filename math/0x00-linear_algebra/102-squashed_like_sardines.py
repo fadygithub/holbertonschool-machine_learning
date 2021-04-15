@@ -12,7 +12,7 @@ def cat_matrices(mat1, mat2, axis=0):
 
 
 def cat_matrices_comp(mat1, mat2, axis):
-    """Recursive function that concatenates two matrices along a specific axis"""
+    """Recursive function concatenating two matrices along a specific axis"""
     if axis != 0:
         return [cat_matrices_comp(u, v, axis - 1) for u, v in zip(mat1, mat2)]
     return matrix_copy(mat1 + mat2)
