@@ -35,7 +35,7 @@ def add_matrices2D(mat1, mat2):
 
 
 def add_matrices(mat1, mat2):
-    """Adds matrices."""
+    """Matrices Addition """
     shape1 = matrix_shape(mat1)
     shape2 = matrix_shape(mat2)
     if shape1 != shape2:
