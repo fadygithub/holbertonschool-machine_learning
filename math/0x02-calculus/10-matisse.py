@@ -16,4 +16,3 @@ def poly_derivative(poly):
             return None
         new_L[i] = poly[i + 1] * (i + 1)
     return new_L
-
