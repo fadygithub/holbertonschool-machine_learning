@@ -22,4 +22,3 @@ def poly_integral(poly, C=0):
             new_L.append(poly[i]/(i + 1))
         i += 1
     return new_L
-
