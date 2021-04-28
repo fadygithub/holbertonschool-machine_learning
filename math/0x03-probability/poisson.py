@@ -40,4 +40,3 @@ class Poisson:
         for x in range(0, k+1):
             CDF = CDF + self.pmf(x)
         return CDF
-
