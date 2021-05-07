@@ -2,7 +2,6 @@
 """A module that defines a neuron"""
 import numpy as np
 
-
 class Neuron:
     """Class Neuron"""
     def __init__(self, nx):
@@ -33,6 +32,7 @@ class Neuron:
     def forward_prop(self, X):
         """This will calculate the neuron's forward propagation"""
         Z = np.matmul(self.__W, X) + self.__b
+        #Sigmoid activation function
         self.__A = 1 / (1 + np.exp(-Z))
         return self.__A
 
