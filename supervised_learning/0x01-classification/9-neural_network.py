@@ -4,7 +4,7 @@ import numpy as np
 
 
 class NeuralNetwork:
-    """Clas NeuralNetwork"""
+    """Class NeuralNetwork"""
     def __init__(self, nx, nodes):
         """Data Initialization"""
         if type(nx) != int:
@@ -51,3 +51,4 @@ class NeuralNetwork:
     def A2(self):
         """Getter for A2"""
         return self.__A2
+
