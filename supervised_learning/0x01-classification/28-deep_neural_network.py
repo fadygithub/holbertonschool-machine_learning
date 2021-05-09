@@ -20,6 +20,7 @@ class DeepNeuralNetwork:
         self.__L = len(layers)
         self.__cache = {}
         self.__weights = {}
+        self.__activation = activation
         num_layer = 1
         layer_size = nx
         for i in layers:
@@ -59,7 +60,11 @@ class DeepNeuralNetwork:
                           self.__cache[a]) + self.__weights[b]
             a_new = "A" + str(i)
             if i != self.__L:
-                self.__cache[a_new] = 1 / (1 + np.exp(-Z))
+                if self.__activation == "sig":
+                    self.__cache[a_new] = 1 / (1 + np.exp(-Z))
+                else:
+                    self.__cache[a_new] = (
+                        np.exp(Z) - np.exp(-Z)) / (np.exp(Z) + np.exp(-Z))
             else:
                 t = np.exp(Z)
                 a_new = "A" + str(i)
@@ -92,7 +97,11 @@ class DeepNeuralNetwork:
             b = "b" + str(i)
             self.__weights[w] = self.__weights[w] - alpha * dw
             self.__weights[b] = self.__weights[b] - alpha * db
-            dz = np.matmul(weights_copy["W" + str(i)].T, dz) * (A * (1 - A))
+            if self.__activation == "sig":
+                dz = np.matmul(weights_copy["W" + str(i)].T, dz) * (
+                    A * (1 - A))
+            else:
+                dz = np.matmul(weights_copy["W" + str(i)].T, dz) * (1 - A * A)
 
     def train(self, X, Y, iterations=5000,
               alpha=0.05, verbose=True, graph=True, step=100):
@@ -146,4 +155,4 @@ class DeepNeuralNetwork:
                 b = pickle.load(file_object)
                 return b
         except (OSError, IOError) as e:
-            return None
+            return None     
