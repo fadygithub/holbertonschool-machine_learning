@@ -7,7 +7,7 @@ import pickle
 
 class DeepNeuralNetwork:
     """Class DeepNeuralNetwork"""
-    def __init__(self, nx, layers):
+    def __init__(self, nx, layers, activation='sig'):
         """Data initialization"""
         if type(nx) != int:
             raise TypeError("nx must be an integer")
@@ -155,4 +155,4 @@ class DeepNeuralNetwork:
                 b = pickle.load(file_object)
                 return b
         except (OSError, IOError) as e:
-            return None     
+            return None           
