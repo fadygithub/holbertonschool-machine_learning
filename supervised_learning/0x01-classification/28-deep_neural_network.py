@@ -132,7 +132,6 @@ class DeepNeuralNetwork:
             if i != iterations:
                 self.gradient_descent(Y, cache, alpha)
                 _, cache = self.forward_prop(X)
-
         if graph is True:
             plt.plot(iter_x, cost_list)
             plt.title("Training Cost")
@@ -156,4 +155,3 @@ class DeepNeuralNetwork:
                 return b
         except (OSError, IOError) as e:
             return None
-
