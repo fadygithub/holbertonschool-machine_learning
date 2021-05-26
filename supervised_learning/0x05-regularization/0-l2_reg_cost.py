@@ -3,11 +3,6 @@
 
 import numpy as np
 
-# cost is the cost of the network without L2 regularization
-# lambtha is the regularization parameter
-# weights is a dictionary of the weights and biases
-# L is the number of layers in the neural network
-# m is the number of data points used
 
 def l2_reg_cost(cost, lambtha, weights, L, m):
     """Function L2 Regularization"""
