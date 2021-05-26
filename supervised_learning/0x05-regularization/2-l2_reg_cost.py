@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-"""Cost Calculation Module
-cost is a tensor containing the cost of the network without L2 regularization"""
+"""Cost Calculation Module"""
 
 import tensorflow as tfn
 
