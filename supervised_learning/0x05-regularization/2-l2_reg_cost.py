@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Cost Calculation Module """
-import tensorflow as tf
+"""Cost Calculation Module
+cost is a tensor containing the cost of the network without L2 regularization"""
 
-# cost is a tensor containing the cost of the network without L2 regularization
+import tensorflow as tfn
+
 
 def l2_reg_cost(cost):
     """Function taht calculates the cost"""
