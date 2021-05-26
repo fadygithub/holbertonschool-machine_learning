@@ -4,7 +4,6 @@
 
 import numpy as np
 
-
 # Y is a one-hot numpy.ndarray of shape (classes, m) 
 # that contains the correct labels for the data
 # classes is the number of classes
@@ -30,3 +29,4 @@ def l2_reg_gradient_descent(Y, weights, cache, alpha, lambtha, L):
         weights[w] = weights[w] - alpha * dw
         weights[b] = weights[b] - alpha * db
         dz = np.matmul(weights_copy["W" + str(i)].T, dz) * (1 - A * A)
+
