@@ -5,7 +5,8 @@
 import numpy as np
 
 
-# Y is a one-hot numpy.ndarray of shape (classes, m) that contains the correct labels for the data
+# Y is a one-hot numpy.ndarray of shape (classes, m) 
+# that contains the correct labels for the data
 # classes is the number of classes
 # m is the number of data points
 # weights is a dictionary of the weights and biases of the neural network
