@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Cost Calculation Module"""
 
-import tensorflow as tfn
+import tensorflow as tf
 
 
 def l2_reg_cost(cost):
