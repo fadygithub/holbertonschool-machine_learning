@@ -1,14 +1,5 @@
 #!/usr/bin/env python3
 """Weights and biases Update Module"""
-# Y is a one-hot numpy.ndarray of shape (classes, m) 
-# that contains the correct labels for the data
-# classes is the number of classes
-# m is the number of data points
-# weights is a dictionary of the weights and biases of the neural network
-# cache is a dictionary of the outputs of each layer of the neural network
-# alpha is the learning rate
-# lambtha is the L2 regularization parameter
-# L is the number of layers of the network
 import numpy as np
 
 
