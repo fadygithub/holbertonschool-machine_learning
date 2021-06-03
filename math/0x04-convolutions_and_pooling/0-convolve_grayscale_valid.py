@@ -4,13 +4,19 @@
 import numpy as np
 
 
+import numpy as np
+
+
 def convolve_grayscale_valid(images, kernel):
-     """Function that returns a numpy array with the convolved images"""
-    m, h, w = images.shape
-    kh, kw = kernel.shape
-    conv = np.zeros((m, h - kh + 1, w - kw + 1))
-    for row in range(conv.shape[1]):
-        for column in range(conv.shape[2]):
-            sub_matrix = images[:, row: row + kh, column: column + kw]
-            conv[:, row, column] = (sub_matrix * kernel).sum(axis=(1, 2))
-    return conv
+    """Function that returns a numpy array with the convolved images"""
+    w, h, m = images.shape[2], images.shape[1], images.shape[0]
+    kw, kh = kernel.shape[1], kernel.shape[0]
+    new_h = int(h - kh + 1)
+    new_w = int(w - kw + 1)
+    output = np.zeros((m, new_h, new_w))
+    for x in range(new_w):
+        for y in range(new_h):
+            output[:, y, x] = (kernel * images[:,
+                                               y: y + kh,
+                                               x: x + kw]).sum(axis=(1, 2))
+    return output
