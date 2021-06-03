@@ -4,9 +4,6 @@
 import numpy as np
 
 
-import numpy as np
-
-
 def convolve_grayscale_valid(images, kernel):
     """Function that returns a numpy array with the convolved images"""
     w, h, m = images.shape[2], images.shape[1], images.shape[0]
