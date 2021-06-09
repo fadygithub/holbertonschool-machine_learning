@@ -5,7 +5,7 @@ import tensorflow.keras as K
 
 def lenet5(X):
     """Function that returns the follwing:
-        - K Model using Adam 
+        - K Model using Adam
         - accuracy"""
     conv1 = K.layers.Conv2D(filters=6,
                             kernel_size=(5, 5),
